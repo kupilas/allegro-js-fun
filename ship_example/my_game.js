@@ -68,7 +68,11 @@ function updateShipControls(){
 			col: rand()%128 + 100,
 			on: true
 		};
+
 		current_bullet%=num_bullets;
+		// the same as this but with fancy modulo math
+		// if(current_bullet == num_bullets)
+		// 	current_bullet = 0;
 	}
 }	
 
