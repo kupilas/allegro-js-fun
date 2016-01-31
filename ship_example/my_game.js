@@ -36,14 +36,16 @@ function init(){
 
 function updateBullets(){
 	for (var c = 0; c < num_bullets; c++){
-		if (!bullets[c].on) 
+		var bullet = bullets[c];
+
+		if (!bullet.on) 
 			continue;
 
-		bullets[c].x += bullets[c].vx;
-		bullets[c].y += bullets[c].vy;
+		bullet.x += bullet.vx;
+		bullet.y += bullet.vy;
 
-		if (bullets[c].y < 0) 
-			bullets[c].on = false;
+		if (bullet.y < 0) 
+			bullet.on = false;
 	}
 }
 
