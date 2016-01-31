@@ -43,18 +43,29 @@ function updateBullets(){
 		bullets[c].y += bullets[c].vy;
 
 		if (bullets[c].y < 0) 
-			bullets[c].on=false;
+			bullets[c].on = false;
 	}
 }
 
 function updateShipControls(){
-	if (key[KEY_UP]) ship_y-=4;
-	if (key[KEY_DOWN]) ship_y+=4;
-	if (key[KEY_LEFT]) ship_x-=4;
-	if (key[KEY_RIGHT]) ship_x+=4;
+	if (key[KEY_UP]) 
+		ship_y -= 4;
+	if (key[KEY_DOWN]) 
+		ship_y += 4;
+	if (key[KEY_LEFT]) 
+		ship_x -= 4;
+	if (key[KEY_RIGHT]) 
+		ship_x += 4;
 
 	if (key[KEY_SPACE]){
-		bullets[current_bullet++] = {x:ship_x,y:ship_y-32-5,vx:frand()*2-1,vy:-10+rand()%4,col:rand()%128+100,on:true};
+		bullets[current_bullet++] = {
+			x: ship_x,
+			y: ship_y - 32 - 5,
+			vx: frand() * 2 - 1,
+			vy: -10 + rand()%4,
+			col: rand()%128 + 100,
+			on: true
+		};
 		current_bullet%=num_bullets;
 	}
 }	
