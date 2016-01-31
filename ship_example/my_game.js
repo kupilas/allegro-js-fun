@@ -19,7 +19,16 @@ function draw(){
 
 
 function init(){
-	for (var c=0;c<num_bullets;c++) bullets[c] = {x:0,y:0,vx:0,vy:0,on:false};
+
+	// int array of bullet objects
+	for (var c = 0; c < num_bullets; c++) 
+		bullets[c] = {
+			x: 0, 
+			y: 0,
+			vx: 0,
+			vy:0,
+			on:false
+		};
 
 	ship_x = SCREEN_W/2;
 	ship_y = SCREEN_H-100;
