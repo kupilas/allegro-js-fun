@@ -26,7 +26,7 @@ function init(){
 			x: 0, 
 			y: 0,
 			vx: 0,
-			vy:0,
+			vy: 0,
 			on:false
 		};
 
@@ -35,11 +35,15 @@ function init(){
 }
 
 function updateBullets(){
-	for (var c=0;c<num_bullets;c++){
-		if (!bullets[c].on) continue;
-		bullets[c].x+=bullets[c].vx;
-		bullets[c].y+=bullets[c].vy;
-		if (bullets[c].y<0) bullets[c].on=false;
+	for (var c = 0; c < num_bullets; c++){
+		if (!bullets[c].on) 
+			continue;
+
+		bullets[c].x += bullets[c].vx;
+		bullets[c].y += bullets[c].vy;
+
+		if (bullets[c].y < 0) 
+			bullets[c].on=false;
 	}
 }
 
